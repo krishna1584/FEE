@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggler</title>
+    <style>
+        #image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+        #image-container img.active {
+            display: block;
+        }
+        #toggle-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img src="https://images.pexels.com/photos/5323965/pexels-photo-5323965.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 1" class="active">
+        <img src="https://images.pexels.com/photos/28627459/pexels-photo-28627459/free-photo-of-black-and-white-cat-by-maiden-s-tower-istanbul.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 2">
+        <img src="https://images.pexels.com/photos/10061760/pexels-photo-10061760.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 3">
+    </div>
+    <button id="toggle-button">Next Image</button>
+
+    <script>
+        const images = document.querySelectorAll('#image-container img');
+        let currentIndex = 0;
+
+        document.getElementById('toggle-button').addEventListener('click', () => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        });
+    </script>
+</body>
+</html>
