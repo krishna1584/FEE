@@ -29,6 +29,27 @@ function assignRewards(users) {
 
 console.log("List of Users with Rewards:", assignRewards(users));
 
+const menu = [
+    "Kadai Paneer",
+    "Dal Makhni",
+    "Masala Dosa",
+    "Chicken Soup",
+    "Chicken Butter Masala",
+    "Veg Chowmein",
+    "Egg Curry",
+    "Egg Maggie",
+    "Chicken Fry",
+    "Chicken Biryani",
+    "Khichdi",
+    "Handi Paneer",
+    "Onion Paratha",
+    "Garlic Naan",
+    "Onion Pizza",
+    "Garlic Bread",
+    "Onion Rings",
+    "Chilli Paneer"
+];
+
 function getVegMenu(menu) {
     return menu.filter(item => !["Chicken", "Egg"].some(keyword => item.includes(keyword)));
 }
