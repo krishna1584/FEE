@@ -7,4 +7,4 @@ for (btns of btn){
 
 btn.onclick = function () {
     console.log("button clicked");
-};
+};      
