@@ -7,5 +7,5 @@ const state = () => {
     </div>
   )                           
 }
-
+                  
 export default state
